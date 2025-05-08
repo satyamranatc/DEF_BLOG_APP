@@ -40,3 +40,21 @@ def addBlog(request):
     return Response({
         "message":"Blog Added"
     })
+
+
+@api_view(["DELETE"])
+def deleteBlog(request,id):
+    
+    for i in Blogs:
+        if int(i["id"]) == id:
+            print(i)
+            Blogs.remove(i)
+            break
+    else:
+        return Response({
+            "message":"Blog Not Found"
+        })
+
+    return Response({
+        "message":"Blog Deleted"
+    })

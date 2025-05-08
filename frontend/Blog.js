@@ -20,17 +20,17 @@ function Display(data)
 {
    BlogContainer.innerHTML = "";
 
-
-   for(let i of data)
-   {
-       BlogContainer.innerHTML += `
-       <div class="Card">
-           <img src="${i.poster}" alt="">
-           <h2>${i.title}</h2>
-           <h4>${i.content}</h4>
-           <p>${i.author}</p>
-           <button>Read More</button>
-       </div>
-       `
-   }
+   for(let i of data) {
+    BlogContainer.innerHTML += `
+    <div class="Card">
+        <img src="${i.poster || 'https://via.placeholder.com/300x200'}" alt="${i.title}">
+        <div class="card-content">
+            <h2>${i.title}</h2>
+            <h4>${i.content}</h4>
+            <p><i class="fas fa-user"></i> ${i.author}</p>
+            <button><i class="fas fa-book-open"></i> Read More</button>
+        </div>
+    </div>
+    `;
+}
 }

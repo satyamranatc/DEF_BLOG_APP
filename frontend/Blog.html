@@ -3,37 +3,31 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My News App</title>
-   <link rel="stylesheet" href="./Blog.css">
+   <title>My DRF Blog App</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Blog.css">
 </head>
 <body>
-  
    <nav>
-       <h2>My DRF BLOG App</h2>
+       <h2>My DRF Blog App</h2>
        <!-- <div id="SearchBar">
-           <input id = "Inpt" type="text" placeholder="Search Any News...">
-           <button onclick="Search()">Search</button>
+           <input id="Inpt" type="text" placeholder="Search for blogs...">
+           <button onclick="Search()"><i class="fas fa-search"></i> Search</button>
        </div> -->
        <ul>
-           <li>Home</li>
-           <li>Admin</li>
+           <li><i class="fas fa-home"></i> Home</li>
+           <li><i class="fas fa-user-shield"></i> Admin</li>
        </ul>
    </nav>
 
-
-
-
-   <main id = "Main">
-
-
-    
+   <main id="Main">
+       <!-- Blog cards will be inserted here by JavaScript -->
    </main>
 
-
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="./Blog.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./Blog.js"></script>
 </html>
-
-
-

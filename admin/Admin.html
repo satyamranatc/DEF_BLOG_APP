@@ -13,13 +13,34 @@
         <h1>Admin Pannel For DRF BLOG APP</h1>
     </center>
     <form id = "MyForm">
-        <input type="text" placeholder="Id: ">
+        <input type="number" placeholder="Id: ">
         <input type="text" placeholder="Poster: ">
         <input type="text" placeholder="Title: ">
         <input type="text" placeholder="Desc: ">
         <input type="text" placeholder="Author: ">
         <button>Add Blog</button>
     </form>
+
+    <hr>
+    <section id="BlogTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Author</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id = "tBody">
+
+            </tbody>
+        </table>
+    </section>
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
