@@ -26,6 +26,8 @@ Blogs = [
     }
 ]
 
+
+
 @api_view(["GET"])
 def showList(request):
     return Response({
@@ -40,6 +42,24 @@ def addBlog(request):
     return Response({
         "message":"Blog Added"
     })
+
+@api_view(["PUT"])
+def updateBlog(request,id):
+    for i in Blogs:
+        if int(i["id"]) == id:
+            print(i)
+            i.update(request.data)
+            break
+    else:
+        return Response({
+            "message":"Blog Not Found"
+        })
+
+    return Response({
+        "message":"Blog Updated"
+    })
+    
+
 
 
 @api_view(["DELETE"])
